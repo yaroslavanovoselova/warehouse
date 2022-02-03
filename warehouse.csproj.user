@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="CreateCategory.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="CreateItem.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GetDateForGenerator.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="GetNameOfWarehouse.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="ItemImage.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="SetMinAmountOfItems.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="CreateCategory.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="CreateItem.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GetDateForGenerator.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="GetNameOfWarehouse.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="ItemImage.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="SetMinAmountOfItems.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

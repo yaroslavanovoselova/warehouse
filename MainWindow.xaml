@@ -1,0 +1,42 @@
+﻿<Window x:Class="warehouse.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:warehouse"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="446" Width="914" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <TreeView x:Name="CategoriesTreeView" Margin="0,35,550,0" Background="Gainsboro" >
+            <TreeView.ContextMenu>
+                <ContextMenu>
+                    <MenuItem x:Name="CreateCategoryMenuItem" Header="Создать раздел" Click="CreateCategoryMenuItem_Click"/>
+                </ContextMenu>
+            </TreeView.ContextMenu>
+        </TreeView>
+        <DataGrid x:Name="ItemsDataGrid" Margin="255,35,0,0" SelectionMode="Single" ContextMenuOpening="ItemsContextMenu_ContextMenuOpening">
+            <DataGrid.ContextMenu>
+                <ContextMenu x:Name="ItemsContextMenu" >
+                    <MenuItem x:Name="RemoveItemMenuItem" Header="Удалить выбранный товар" Click="RemoveItemMenuItem_Click" />
+                    <MenuItem x:Name="ChangeItemMenuItem" Header="Изменить выбранный товар" Click="ChangeItemMenuItem_Click" />
+                    <MenuItem x:Name="ShowImageMenuItem" Header="Просмотр изображения" Click="ShowImageMenuItem_Click" />
+                </ContextMenu>
+            </DataGrid.ContextMenu>
+            <DataGrid.Columns>
+                <DataGridTextColumn IsReadOnly="True" Header="Наименование" Binding="{Binding Path=Name}"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Артикул" Binding="{Binding Path=ArticleNumber}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Цена"  Binding="{Binding Path=Price}"/>
+                <DataGridTextColumn IsReadOnly="True" Header="Количество"  Binding="{Binding Path=AmountLeft}" />
+                <DataGridTextColumn IsReadOnly="True" Header="Описание"  Binding="{Binding Path=AdditionalInfo}" />
+            </DataGrid.Columns>
+        </DataGrid>
+        <Menu Height="30" VerticalAlignment="Top" Margin="0,0,0,0">
+            <MenuItem x:Name="NewWarehouseMenuItem" Header="Новый склад" FontSize="14" Height="30" Click="NewWarehouseMenuItem_Click"/>
+            <MenuItem x:Name="LoadWarehouseMenuItem" Header="Загрузить склад" FontSize="14" Height="30" Click="LoadWarehouseMenuItem_Click"/>
+            <MenuItem x:Name="ChoseMinAmountMenuItem" Header="Установить минимальное количество" FontSize="14" Height="30" Click="ChoseMinAmountMenuItem_Click"/>
+            <MenuItem x:Name="GetCSVMenuItem" Header="Создать CSV-отчет" FontSize="14" Height="30" Click="GetCSVMenuItem_Click" Visibility="Hidden" />
+            <MenuItem x:Name="HelpMenuItem" Header="Справка" FontSize="14" Height="30" Click="HelpMenuItem_Click" />
+        </Menu>
+
+    </Grid>
+</Window>
