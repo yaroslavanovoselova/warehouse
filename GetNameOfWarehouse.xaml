@@ -1,0 +1,16 @@
+﻿<Window x:Class="warehouse.GetNameOfWarehouse"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:warehouse"
+        mc:Ignorable="d"
+        Title="Создание/открытие склада" Height="300" Width="450" WindowStartupLocation="CenterScreen" Closing="Window_Closing">
+    <Grid Margin="0,0,0,0">
+        <Label Content="Введите имя склада, если хотите создать новый:" HorizontalAlignment="Left" Height="35" Margin="30,40,0,0" VerticalAlignment="Top" Width="374" FontSize="15" FontWeight="Bold"/>
+        <TextBox x:Name="NameOfWarehouseTextBox" HorizontalAlignment="Left" Height="30" Margin="134,87,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="270" FontSize="14"/>
+        <Button x:Name="OKButton" Content="OK" HorizontalAlignment="Left" Height="35" Margin="275,221,0,0" VerticalAlignment="Top" Width="129" FontSize="16" FontWeight="Bold" Click="OKButton_Click"/>
+        <Label x:Name="LoadLabel" Content="Загрузите раннее созданный склад:" HorizontalAlignment="Left" Height="35" Margin="30,130,0,0" VerticalAlignment="Top" Width="277" FontSize="15" FontWeight="Bold"/>
+        <Button x:Name="LoadWarehouseButton" Content="Загрузить склад" HorizontalAlignment="Left" Height="30" Margin="134,170,0,0" VerticalAlignment="Top" Width="270" Click="LoadWarehouse_Click"/>
+    </Grid>
+</Window>
